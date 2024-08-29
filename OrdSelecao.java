@@ -32,12 +32,13 @@ public class OrdSelecao {
 
     private static void ordenacaoSelecao(int[] numeros) {
         int tamanho = numeros.length;
-        int aux, min;
+        int aux, min, contador =0;
 
         for (int i = 0; i < tamanho - 1; i++) {
             min = i;
 
             for (int j = (i + 1); j < tamanho; j++) {
+                contador ++;
                 if (numeros[j] < numeros[min])
                     min = j;
 
@@ -53,8 +54,10 @@ public class OrdSelecao {
 
         for (int num : numeros) {
             System.out.print(num + " ");
+            
         }
         System.out.println();
+        System.out.println("Comparacoes realizadas: " + contador);
 
     }
 
